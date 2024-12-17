@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './ShopItem.module.css'
 
-export const ShopItemFunc = (props) => {
- const {brand, title, description,descriptionFull, price, currency} = props.item
-    return (
+export const ShopItemFunc = ({ item: { brand, title, description, descriptionFull, price, currency } }) => {
+  return (
     <div className={styles['main-content']}>
         <h2>{brand}</h2>
         <h1>{title}</h1>
@@ -16,5 +15,5 @@ export const ShopItemFunc = (props) => {
             <button>Добавить в корзину</button>
         </div>
     </div>
-  )
-}
+  );
+};
